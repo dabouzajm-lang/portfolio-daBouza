@@ -1,0 +1,422 @@
+// ========================================
+// PROJECTS SECTION
+// ========================================
+
+.projects {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: $section-padding 0;
+}
+
+
+// ========================================
+// HEADER
+// ========================================
+
+.projects__header {
+    max-width: 750px;
+
+    margin-bottom: 3.5rem;
+}
+
+.projects__header h2 {
+    margin-top: 1rem;
+
+    color: $text-primary;
+
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+.projects__header p {
+    margin-top: 1.25rem;
+
+    color: $text-secondary;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+// ========================================
+// FEATURED PROJECT
+// ========================================
+
+.projects__featured {
+    margin-bottom: 2rem;
+}
+
+
+// ========================================
+// PROJECT GRID
+// ========================================
+
+.projects__grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+
+// ========================================
+// PROJECT CARD
+// ========================================
+
+.project-card {
+    overflow: hidden;
+
+    background-color: $card-bg;
+
+    border: 1px solid $border-color;
+
+    border-radius: $radius-lg;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(56, 189, 248, 0.5);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+// ========================================
+// PROJECT IMAGE
+// ========================================
+
+.project-card__image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+}
+
+.project-card__image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-card__image img {
+    transform: scale(1.04);
+}
+
+
+// ========================================
+// FEATURED BADGE
+// ========================================
+
+.project-card__badge {
+    position: absolute;
+
+    top: 1rem;
+    left: 1rem;
+
+    padding: 0.45rem 0.7rem;
+
+    background-color: $accent;
+
+    border-radius: $radius-sm;
+
+    color: $bg-primary;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+
+// ========================================
+// PROJECT CONTENT
+// ========================================
+
+.project-card__content {
+    padding: 1.75rem;
+}
+
+.project-card__category {
+    display: block;
+
+    margin-bottom: 0.75rem;
+
+    color: $accent;
+
+    font-size: 0.7rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+.project-card__content h3 {
+    margin-bottom: 0.75rem;
+
+    color: $text-primary;
+
+    font-size: 1.5rem;
+
+    line-height: 1.2;
+}
+
+.project-card__description {
+    margin-bottom: 1.5rem;
+
+    color: $text-secondary;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+// ========================================
+// TECHNOLOGIES
+// ========================================
+
+.project-card__technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.project-card__technology {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.4rem;
+
+    padding: 0.45rem 0.65rem;
+
+    background-color: rgba(15, 23, 42, 0.6);
+
+    border: 1px solid $border-color;
+
+    border-radius: $radius-sm;
+
+    color: $text-secondary;
+
+    font-size: 0.7rem;
+
+    font-weight: 500;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-card__technology i {
+    font-size: 0.9rem;
+}
+
+.project-card__technology:hover {
+    transform: translateY(-2px);
+
+    border-color: $accent;
+}
+
+
+// ========================================
+// PROJECT ACTIONS
+// ========================================
+
+.project-card__actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+}
+
+.project-card__button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 0.5rem;
+
+    padding: 0.7rem 1rem;
+
+    border-radius: $radius-sm;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.project-card__button:hover {
+    transform: translateY(-2px);
+}
+
+.project-card__button--primary {
+    background-color: $accent;
+
+    color: $bg-primary;
+}
+
+.project-card__button--primary:hover {
+    background-color: lighten($accent, 5%);
+}
+
+.project-card__button--secondary {
+    background-color: transparent;
+
+    border: 1px solid $border-color;
+
+    color: $text-primary;
+}
+
+.project-card__button--secondary:hover {
+    border-color: $accent;
+
+    color: $accent;
+}
+
+
+// ========================================
+// FEATURED PROJECT CARD
+// ========================================
+
+.project-card--featured {
+    display: grid;
+
+    grid-template-columns: 1.15fr 1fr;
+
+    min-height: 430px;
+}
+
+.project-card--featured .project-card__image {
+    height: 100%;
+
+    aspect-ratio: auto;
+}
+
+.project-card--featured .project-card__content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 3rem;
+}
+
+.project-card--featured .project-card__content h3 {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    line-height: 1.05;
+}
+
+.project-card--featured .project-card__description {
+    max-width: 500px;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+.project-card--featured .project-card__technologies {
+    margin-top: 0.5rem;
+}
+
+
+// ========================================
+// TABLET
+// ========================================
+
+@media (max-width: 900px) {
+
+    .projects__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card--featured .project-card__image {
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+    }
+
+    .project-card--featured .project-card__content {
+        padding: 2rem;
+    }
+
+}
+
+
+// ========================================
+// MOBILE
+// ========================================
+
+@media (max-width: 600px) {
+
+    .projects {
+        padding: 70px 0;
+    }
+
+    .projects__header {
+        margin-bottom: 2.5rem;
+    }
+
+    .project-card__content {
+        padding: 1.25rem;
+    }
+
+    .project-card--featured .project-card__content {
+        padding: 1.5rem;
+    }
+
+    .project-card__actions {
+        flex-direction: column;
+    }
+
+    .project-card__button {
+        width: 100%;
+    }
+
+}

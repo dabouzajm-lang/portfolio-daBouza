@@ -1,0 +1,88 @@
+.career {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: $section-padding 0;
+}
+
+.career__container {
+    padding: 4rem;
+
+    background-color: $bg-secondary;
+
+    border: 1px solid $border-color;
+
+    border-radius: $radius-lg;
+}
+
+.career__content {
+    max-width: 850px;
+}
+
+.career__content h2 {
+    margin-bottom: 1.5rem;
+
+    color: $text-primary;
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.03em;
+}
+
+.career__content p {
+    margin-bottom: 1.25rem;
+
+    color: $text-secondary;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+.career__technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    margin-top: 2rem;
+}
+
+.career__technologies span {
+    padding: 0.5rem 0.85rem;
+
+    border: 1px solid $border-color;
+
+    border-radius: $radius-sm;
+
+    color: $text-secondary;
+
+    font-size: 0.85rem;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.career__technologies span:hover {
+    color: $accent;
+
+    border-color: $accent;
+}
+
+@media (max-width: 768px) {
+
+    .career {
+        padding: 70px 0;
+    }
+
+    .career__container {
+        padding: 2rem;
+    }
+
+}
