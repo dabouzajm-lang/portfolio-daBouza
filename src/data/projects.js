@@ -100,6 +100,61 @@ const projects = [
         github: "https://github.com/dabouzajm-lang/voleyarg",
 
         featured: false
+    },
+
+    {
+        id: 3,
+
+        title: "Portfolio Personal",
+
+        category: "React Application",
+
+        description:
+            "Portfolio profesional desarrollado con React para presentar mi perfil como Frontend Developer, proyectos y stack tecnológico.",
+
+        longDescription:
+            "Aplicación web desarrollada con React y Vite utilizando una arquitectura basada en componentes reutilizables. Implementa SASS para la organización de estilos, diseño responsive, navegación interna, optimización SEO y publicación mediante GitHub Pages.",
+
+        image: "/assets/img/portfolio.jpg",
+
+        technologies: [
+            {
+                name: "React",
+                icon: "devicon-react-original colored"
+            },
+            {
+                name: "JavaScript",
+                icon: "devicon-javascript-plain colored"
+            },
+            {
+                name: "Vite",
+                icon: "devicon-vitejs-plain colored"
+            },
+            {
+                name: "SASS",
+                icon: "devicon-sass-original colored"
+            },
+            {
+                name: "GitHub",
+                icon: "devicon-github-original"
+            }
+        ],
+
+        features: [
+            "Arquitectura basada en componentes",
+            "Diseño responsive",
+            "Sistema de estilos con SASS",
+            "Optimización SEO",
+            "Componentes reutilizables",
+            "Deploy mediante GitHub Pages"
+        ],
+
+        demo: "https://dabouzajm-lang.github.io/portfolio-daBouza/",
+
+        github: "https://github.com/dabouzajm-lang/portfolio-daBouza",
+
+        featured: false
     }
 ]
+
 export default projects
