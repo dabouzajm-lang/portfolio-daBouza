@@ -12,7 +12,7 @@ const projects = [
         longDescription:
             "Aplicación web desarrollada con React y Vite. Implementa navegación mediante React Router, gestión global del carrito utilizando Context API e integración con Firebase y Firestore para la obtención y gestión de productos.",
 
-        image: "/assets/img/volley-store.jpg",
+        image: `${import.meta.env.BASE_URL}assets/img/volley-store.jpg`,
 
         technologies: [
             {
@@ -62,7 +62,7 @@ const projects = [
         longDescription:
             "Proyecto web desarrollado desde cero aplicando HTML semántico, arquitectura de estilos con SASS, diseño responsive y buenas prácticas de SEO.",
 
-        image: "/assets/img/voley-argentino.jpg",
+        image: `${import.meta.env.BASE_URL}assets/img/voley-argentino.jpg`,
 
         technologies: [
             {
@@ -115,7 +115,7 @@ const projects = [
         longDescription:
             "Aplicación web desarrollada con React y Vite utilizando una arquitectura basada en componentes reutilizables. Implementa SASS para la organización de estilos, diseño responsive, navegación interna, optimización SEO y publicación mediante GitHub Pages.",
 
-        image: "/assets/img/portfolio.jpg",
+        image: `${import.meta.env.BASE_URL}assets/img/portfolio.jpg`,
 
         technologies: [
             {

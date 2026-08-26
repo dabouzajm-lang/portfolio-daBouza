@@ -48,7 +48,7 @@ function Hero() {
                         </a>
 
                         <a
-                            href="/public/assets/cv/daBouzaJuanManuel.pdf"
+                            href={`${import.meta.env.BASE_URL}assets/cv/daBouzaJuanManuel.pdf`}
                             target="_blank"
                             rel="noreferrer"
                             className="btn btn--secondary"
