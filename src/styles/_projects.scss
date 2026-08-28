@@ -1,5 +1,5 @@
 // ========================================
-// PROJECTS SECTION
+// PROJECTS
 // ========================================
 
 .projects {
@@ -46,24 +46,17 @@
 
 
 // ========================================
-// FEATURED PROJECT
-// ========================================
-
-.projects__featured {
-    margin-bottom: 2rem;
-}
-
-
-// ========================================
-// PROJECT GRID
+// GRID
 // ========================================
 
 .projects__grid {
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 2rem;
+    gap: 1.5rem;
+
+    align-items: stretch;
 }
 
 
@@ -72,6 +65,12 @@
 // ========================================
 
 .project-card {
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
     overflow: hidden;
 
     background-color: $card-bg;
@@ -87,28 +86,57 @@
 }
 
 .project-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     border-color: rgba(56, 189, 248, 0.5);
 
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
 }
 
 
 // ========================================
-// PROJECT IMAGE
+// FEATURED PROJECT
+// ========================================
+
+.project-card--featured {
+    grid-column: 1 / -1;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(0, 0.9fr);
+
+    height: auto;
+}
+
+.project-card--featured:hover {
+    border-color: $accent;
+}
+
+
+// ========================================
+// IMAGE
 // ========================================
 
 .project-card__image {
     position: relative;
 
-    width: 100%;
-
-    aspect-ratio: 16 / 9;
-
     overflow: hidden;
+
+    background-color: $bg-secondary;
 }
 
+
+// Imágenes de proyectos secundarios
+.project-card:not(.project-card--featured) .project-card__image {
+    aspect-ratio: 16 / 9;
+
+    min-height: 0;
+}
+
+
+// Todas las imágenes
 .project-card__image img {
     display: block;
 
@@ -117,11 +145,25 @@
 
     object-fit: cover;
 
+    object-position: center top;
+
     transition: transform 0.5s ease;
 }
 
+
+// Zoom suave
 .project-card:hover .project-card__image img {
-    transform: scale(1.04);
+    transform: scale(1.03);
+}
+
+
+// Imagen del proyecto destacado
+.project-card--featured .project-card__image {
+    min-height: 100%;
+}
+
+.project-card--featured .project-card__image img {
+    object-position: center top;
 }
 
 
@@ -135,11 +177,13 @@
     top: 1rem;
     left: 1rem;
 
-    padding: 0.45rem 0.7rem;
+    z-index: 2;
+
+    padding: 0.45rem 0.75rem;
 
     background-color: $accent;
 
-    border-radius: $radius-sm;
+    border-radius: 999px;
 
     color: $bg-primary;
 
@@ -154,21 +198,115 @@
 
 
 // ========================================
-// PROJECT CONTENT
+// FEATURED IMAGE OVERLAY
+// ========================================
+
+.project-card__overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+
+    padding: 1rem;
+
+    background-color: rgba(15, 23, 42, 0.78);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+// Mostrar overlay solamente en featured
+.project-card--featured:hover .project-card__overlay {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+// ========================================
+// OVERLAY LINKS
+// ========================================
+
+.project-card__overlay-link {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.4rem;
+
+    padding: 0.7rem 1rem;
+
+    background-color: rgba(15, 23, 42, 0.9);
+
+    border: 1px solid $accent;
+
+    border-radius: $radius-sm;
+
+    color: $text-primary;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-card__overlay-link:hover {
+    background-color: $accent;
+
+    color: $bg-primary;
+
+    transform: translateY(-2px);
+}
+
+
+// ========================================
+// CONTENT
 // ========================================
 
 .project-card__content {
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
     padding: 1.75rem;
 }
 
-.project-card__category {
-    display: block;
+.project-card--featured .project-card__content {
+    padding: 2.25rem;
+}
 
+
+// ========================================
+// CATEGORY
+// ========================================
+
+.project-card__category {
     margin-bottom: 0.75rem;
 
     color: $accent;
 
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 
     font-weight: 600;
 
@@ -177,8 +315,13 @@
     text-transform: uppercase;
 }
 
-.project-card__content h3 {
-    margin-bottom: 0.75rem;
+
+// ========================================
+// TITLE
+// ========================================
+
+.project-card__title {
+    margin: 0 0 1rem;
 
     color: $text-primary;
 
@@ -187,8 +330,17 @@
     line-height: 1.2;
 }
 
+.project-card--featured .project-card__title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+
+// ========================================
+// DESCRIPTION
+// ========================================
+
 .project-card__description {
-    margin-bottom: 1.5rem;
+    margin: 0 0 1.5rem;
 
     color: $text-secondary;
 
@@ -219,7 +371,7 @@
 
     gap: 0.4rem;
 
-    padding: 0.45rem 0.65rem;
+    padding: 0.4rem 0.6rem;
 
     background-color: rgba(15, 23, 42, 0.6);
 
@@ -234,8 +386,8 @@
     font-weight: 500;
 
     transition:
-        border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .project-card__technology i {
@@ -250,7 +402,48 @@
 
 
 // ========================================
-// PROJECT ACTIONS
+// FEATURED PROJECT FEATURES
+// ========================================
+
+.project-card__features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0.65rem;
+
+    margin: 0 0 1.75rem;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+.project-card__features li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.65rem;
+
+    color: $text-secondary;
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+}
+
+.project-card__features li span {
+    flex-shrink: 0;
+
+    color: $accent;
+
+    font-weight: 700;
+}
+
+
+// ========================================
+// ACTIONS
 // ========================================
 
 .project-card__actions {
@@ -259,18 +452,21 @@
     flex-wrap: wrap;
 
     gap: 0.75rem;
+
+    margin-top: auto;
 }
 
 .project-card__button {
     display: inline-flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 0.5rem;
 
-    padding: 0.7rem 1rem;
+    min-height: 42px;
+
+    padding: 0.65rem 1rem;
 
     border-radius: $radius-sm;
 
@@ -278,27 +474,40 @@
 
     font-weight: 600;
 
-    text-decoration: none;
-
     transition:
         transform 0.3s ease,
         background-color 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .project-card__button:hover {
     transform: translateY(-2px);
 }
 
+
+// ========================================
+// PRIMARY BUTTON
+// ========================================
+
 .project-card__button--primary {
     background-color: $accent;
+
+    border: 1px solid $accent;
 
     color: $bg-primary;
 }
 
 .project-card__button--primary:hover {
-    background-color: lighten($accent, 5%);
+    background-color: $text-primary;
+
+    border-color: $text-primary;
 }
+
+
+// ========================================
+// SECONDARY BUTTON
+// ========================================
 
 .project-card__button--secondary {
     background-color: transparent;
@@ -316,49 +525,17 @@
 
 
 // ========================================
-// FEATURED PROJECT CARD
+// BUTTON ARROWS
 // ========================================
 
-.project-card--featured {
-    display: grid;
-
-    grid-template-columns: 1.15fr 1fr;
-
-    min-height: 430px;
+.project-card__button span,
+.project-card__overlay-link span {
+    transition: transform 0.3s ease;
 }
 
-.project-card--featured .project-card__image {
-    height: 100%;
-
-    aspect-ratio: auto;
-}
-
-.project-card--featured .project-card__content {
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding: 3rem;
-}
-
-.project-card--featured .project-card__content h3 {
-    font-size: clamp(2rem, 4vw, 3rem);
-
-    line-height: 1.05;
-}
-
-.project-card--featured .project-card__description {
-    max-width: 500px;
-
-    font-size: 1rem;
-
-    line-height: 1.8;
-}
-
-.project-card--featured .project-card__technologies {
-    margin-top: 0.5rem;
+.project-card__button:hover span,
+.project-card__overlay-link:hover span {
+    transform: translate(2px, -2px);
 }
 
 
@@ -372,18 +549,26 @@
         grid-template-columns: 1fr;
     }
 
+
+    // Featured pasa a card vertical
     .project-card--featured {
-        grid-template-columns: 1fr;
+        grid-column: auto;
+
+        display: flex;
+
+        flex-direction: column;
     }
 
+
+    // Imagen featured
     .project-card--featured .project-card__image {
-        height: auto;
-
-        aspect-ratio: 16 / 9;
+        min-height: 320px;
     }
 
-    .project-card--featured .project-card__content {
-        padding: 2rem;
+
+    // En touch no dependemos de hover
+    .project-card__overlay {
+        display: none;
     }
 
 }
@@ -399,21 +584,38 @@
         padding: 70px 0;
     }
 
+
     .projects__header {
         margin-bottom: 2.5rem;
     }
 
-    .project-card__content {
+
+    // Todas las imágenes mantienen formato visual
+    .project-card__image,
+    .project-card--featured .project-card__image {
+        min-height: 220px;
+    }
+
+
+    .project-card:not(.project-card--featured) .project-card__image {
+        aspect-ratio: 16 / 9;
+
+        min-height: 0;
+    }
+
+
+    // Content
+    .project-card__content,
+    .project-card--featured .project-card__content {
         padding: 1.25rem;
     }
 
-    .project-card--featured .project-card__content {
-        padding: 1.5rem;
-    }
 
+    // Buttons verticales
     .project-card__actions {
         flex-direction: column;
     }
+
 
     .project-card__button {
         width: 100%;

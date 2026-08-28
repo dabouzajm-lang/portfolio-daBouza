@@ -4,13 +4,13 @@ const projects = [
 
         title: "Volley Store",
 
-        category: "React Application",
+        category: "React E-commerce",
 
         description:
-            "E-commerce desarrollado con React para la gestión y comercialización de productos relacionados con el vóley.",
+            "E-commerce desarrollado con React, enfocado en una experiencia de compra clara, responsive y funcional para productos relacionados con el vóley.",
 
         longDescription:
-            "Aplicación web desarrollada con React y Vite. Implementa navegación mediante React Router, gestión global del carrito utilizando Context API e integración con Firebase y Firestore para la obtención y gestión de productos.",
+            "Aplicación web desarrollada con React y Vite, estructurada mediante componentes reutilizables y navegación con React Router. Implementa gestión global del carrito utilizando Context API e integración con Firebase Firestore para la consulta de productos y generación de órdenes de compra.",
 
         image: `${import.meta.env.BASE_URL}assets/img/volley-store.jpg`,
 
@@ -24,8 +24,16 @@ const projects = [
                 icon: "devicon-javascript-plain colored"
             },
             {
+                name: "Vite",
+                icon: "devicon-vitejs-plain colored"
+            },
+            {
                 name: "Firebase",
                 icon: "devicon-firebase-plain colored"
+            },
+            {
+                name: "React Router",
+                icon: "devicon-reactrouter-plain colored"
             },
             {
                 name: "Bootstrap",
@@ -34,12 +42,15 @@ const projects = [
         ],
 
         features: [
-            "Catálogo de productos",
+            "Carrito de compras global con Context API",
+            "Checkout y generación de órdenes",
+            "Persistencia de productos y órdenes con Firestore",
+            "Catálogo dinámico de productos",
             "Filtrado por categorías",
-            "Detalle de productos",
-            "Carrito de compras",
-            "Gestión de estado con Context API",
-            "Persistencia de productos mediante Firestore"
+            "Vista de detalle de producto",
+            "Control de stock y cantidades",
+            "Navegación SPA con React Router",
+            "Diseño responsive"
         ],
 
         demo: "https://volley-store-swart.vercel.app/",
@@ -113,7 +124,7 @@ const projects = [
             "Portfolio profesional desarrollado con React para presentar mi perfil como Frontend Developer, proyectos y stack tecnológico.",
 
         longDescription:
-            "Aplicación web desarrollada con React y Vite utilizando una arquitectura basada en componentes reutilizables. Implementa SASS para la organización de estilos, diseño responsive, navegación interna, optimización SEO y publicación mediante GitHub Pages.",
+            "Aplicación web desarrollada con React y Vite utilizando una arquitectura basada en componentes reutilizables. Implementa SASS para la organización de estilos, diseño responsive, navegación interna y publicación mediante GitHub Pages.",
 
         image: `${import.meta.env.BASE_URL}assets/img/portfolio.jpg`,
 
@@ -144,7 +155,6 @@ const projects = [
             "Arquitectura basada en componentes",
             "Diseño responsive",
             "Sistema de estilos con SASS",
-            "Optimización SEO",
             "Componentes reutilizables",
             "Deploy mediante GitHub Pages"
         ],
