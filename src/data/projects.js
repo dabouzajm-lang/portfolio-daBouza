@@ -53,7 +53,7 @@ const projects = [
             "Diseño responsive"
         ],
 
-        demo: "https://volley-store-swart.vercel.app/",
+        demo: "https://volley-store-vert.vercel.app/",
 
         github: "https://github.com/dabouzajm-lang/volley-store",
 
