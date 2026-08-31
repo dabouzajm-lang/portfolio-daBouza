@@ -1,3 +1,4 @@
+@use "./variables" as *;
 // ========================================
 // PROJECTS
 // ========================================
@@ -46,6 +47,15 @@
 
 
 // ========================================
+// FEATURED WRAPPER
+// ========================================
+
+.projects__featured {
+    margin-bottom: 1.5rem;
+}
+
+
+// ========================================
 // GRID
 // ========================================
 
@@ -90,7 +100,8 @@
 
     border-color: rgba(56, 189, 248, 0.5);
 
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -99,8 +110,6 @@
 // ========================================
 
 .project-card--featured {
-    grid-column: 1 / -1;
-
     display: grid;
 
     grid-template-columns:
@@ -127,16 +136,12 @@
     background-color: $bg-secondary;
 }
 
-
-// Imágenes de proyectos secundarios
 .project-card:not(.project-card--featured) .project-card__image {
     aspect-ratio: 16 / 9;
 
     min-height: 0;
 }
 
-
-// Todas las imágenes
 .project-card__image img {
     display: block;
 
@@ -147,17 +152,14 @@
 
     object-position: center top;
 
-    transition: transform 0.5s ease;
+    transition:
+        transform 0.5s ease;
 }
 
-
-// Zoom suave
 .project-card:hover .project-card__image img {
     transform: scale(1.03);
 }
 
-
-// Imagen del proyecto destacado
 .project-card--featured .project-card__image {
     min-height: 100%;
 }
@@ -223,17 +225,20 @@
 
     visibility: hidden;
 
+    pointer-events: none;
+
     transition:
         opacity 0.3s ease,
         visibility 0.3s ease;
 }
 
-
-// Mostrar overlay solamente en featured
-.project-card--featured:hover .project-card__overlay {
+.project-card--featured:hover .project-card__overlay,
+.project-card--featured:focus-within .project-card__overlay {
     opacity: 1;
 
     visibility: visible;
+
+    pointer-events: auto;
 }
 
 
@@ -387,7 +392,8 @@
 
     transition:
         transform 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .project-card__technology i {
@@ -398,6 +404,8 @@
     transform: translateY(-2px);
 
     border-color: $accent;
+
+    color: $text-primary;
 }
 
 
@@ -525,17 +533,31 @@
 
 
 // ========================================
+// FOCUS
+// ========================================
+
+.project-card__button:focus-visible,
+.project-card__overlay-link:focus-visible {
+    outline: 2px solid $accent;
+
+    outline-offset: 4px;
+}
+
+
+// ========================================
 // BUTTON ARROWS
 // ========================================
 
 .project-card__button span,
 .project-card__overlay-link span {
-    transition: transform 0.3s ease;
+    transition:
+        transform 0.3s ease;
 }
 
 .project-card__button:hover span,
 .project-card__overlay-link:hover span {
-    transform: translate(2px, -2px);
+    transform:
+        translate(2px, -2px);
 }
 
 
@@ -549,24 +571,16 @@
         grid-template-columns: 1fr;
     }
 
-
-    // Featured pasa a card vertical
     .project-card--featured {
-        grid-column: auto;
-
         display: flex;
 
         flex-direction: column;
     }
 
-
-    // Imagen featured
     .project-card--featured .project-card__image {
         min-height: 320px;
     }
 
-
-    // En touch no dependemos de hover
     .project-card__overlay {
         display: none;
     }
@@ -584,18 +598,14 @@
         padding: 70px 0;
     }
 
-
     .projects__header {
         margin-bottom: 2.5rem;
     }
 
-
-    // Todas las imágenes mantienen formato visual
     .project-card__image,
     .project-card--featured .project-card__image {
         min-height: 220px;
     }
-
 
     .project-card:not(.project-card--featured) .project-card__image {
         aspect-ratio: 16 / 9;
@@ -603,22 +613,48 @@
         min-height: 0;
     }
 
-
-    // Content
     .project-card__content,
     .project-card--featured .project-card__content {
         padding: 1.25rem;
     }
 
-
-    // Buttons verticales
     .project-card__actions {
         flex-direction: column;
     }
 
-
     .project-card__button {
         width: 100%;
+    }
+
+}
+
+
+// ========================================
+// REDUCED MOTION
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-card,
+    .project-card__image img,
+    .project-card__technology,
+    .project-card__overlay,
+    .project-card__overlay-link,
+    .project-card__button,
+    .project-card__button span,
+    .project-card__overlay-link span {
+        transition: none;
+    }
+
+    .project-card:hover,
+    .project-card__technology:hover,
+    .project-card__overlay-link:hover,
+    .project-card__button:hover {
+        transform: none;
+    }
+
+    .project-card:hover .project-card__image img {
+        transform: none;
     }
 
 }

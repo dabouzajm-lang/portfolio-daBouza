@@ -11,7 +11,10 @@ function Navbar() {
     return (
         <header className="navbar">
 
-            <nav className="navbar__container">
+            <nav
+                className="navbar__container"
+                aria-label="Navegación principal"
+            >
 
                 <a
                     href="#hero"
@@ -19,9 +22,15 @@ function Navbar() {
                     aria-label="Ir al inicio"
                     onClick={closeMenu}
                 >
-                    <span>&lt;</span>
+                    <span aria-hidden="true">
+                        &lt;
+                    </span>
+
                     JMB
-                    <span>/&gt;</span>
+
+                    <span aria-hidden="true">
+                        /&gt;
+                    </span>
                 </a>
 
                 {/* Desktop */}
@@ -64,8 +73,11 @@ function Navbar() {
                 {/* Mobile */}
 
                 <button
+                    type="button"
                     className={`navbar__toggle ${
-                        isMenuOpen ? 'navbar__toggle--active' : ''
+                        isMenuOpen
+                            ? 'navbar__toggle--active'
+                            : ''
                     }`}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label={
@@ -74,6 +86,7 @@ function Navbar() {
                             : 'Abrir menú'
                     }
                     aria-expanded={isMenuOpen}
+                    aria-controls="mobile-navigation"
                 >
 
                     <span></span>
@@ -83,6 +96,7 @@ function Navbar() {
                 </button>
 
                 <div
+                    id="mobile-navigation"
                     className={`navbar__mobile-menu ${
                         isMenuOpen
                             ? 'navbar__mobile-menu--open'

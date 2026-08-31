@@ -1,3 +1,8 @@
+@use "./variables" as *;
+// ========================================
+// CAREER
+// ========================================
+
 .career {
     width: 90%;
     max-width: 1200px;
@@ -7,6 +12,11 @@
     padding: $section-padding 0;
 }
 
+
+// ========================================
+// CONTAINER
+// ========================================
+
 .career__container {
     padding: 4rem;
 
@@ -15,7 +25,15 @@
     border: 1px solid $border-color;
 
     border-radius: $radius-lg;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
 }
+
+
+// ========================================
+// CONTENT
+// ========================================
 
 .career__content {
     max-width: 850px;
@@ -43,6 +61,15 @@
     line-height: 1.8;
 }
 
+.career__content p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+// ========================================
+// TECHNOLOGIES
+// ========================================
+
 .career__technologies {
     display: flex;
 
@@ -56,6 +83,8 @@
 .career__technologies span {
     padding: 0.5rem 0.85rem;
 
+    background-color: rgba(15, 23, 42, 0.3);
+
     border: 1px solid $border-color;
 
     border-radius: $radius-sm;
@@ -66,14 +95,22 @@
 
     transition:
         color 0.3s ease,
-        border-color 0.3s ease;
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 .career__technologies span:hover {
     color: $accent;
 
     border-color: $accent;
+
+    transform: translateY(-2px);
 }
+
+
+// ========================================
+// TABLET / MOBILE
+// ========================================
 
 @media (max-width: 768px) {
 
@@ -83,6 +120,40 @@
 
     .career__container {
         padding: 2rem;
+    }
+
+}
+
+
+// ========================================
+// SMALL MOBILE
+// ========================================
+
+@media (max-width: 480px) {
+
+    .career__container {
+        padding: 1.5rem;
+    }
+
+    .career__content p {
+        font-size: 1rem;
+    }
+
+}
+
+
+// ========================================
+// REDUCED MOTION
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .career__technologies span {
+        transition: none;
+    }
+
+    .career__technologies span:hover {
+        transform: none;
     }
 
 }

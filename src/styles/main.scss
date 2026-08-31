@@ -1,13 +1,20 @@
-@import "devicon/devicon.min.css";
-@import "./variables";
-@import "./reset";
-@import "./typography";
+// ========================================
+// GLOBAL
+// ========================================
 
-@import "./navbar";
-@import "./hero";
-@import "./about";
-@import "./skills";
-@import "./projects";
-@import "./career";
-@import "./contact";
-@import "./footer";
+@use "./reset";
+@use "./typography";
+
+
+// ========================================
+// COMPONENTS / SECTIONS
+// ========================================
+
+@use "./navbar";
+@use "./hero";
+@use "./about";
+@use "./skills";
+@use "./projects";
+@use "./career";
+@use "./contact";
+@use "./footer";

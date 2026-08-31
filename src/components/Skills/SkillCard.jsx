@@ -8,7 +8,10 @@ function SkillCard({
     return (
         <article className="skill-card">
 
-            <div className="skill-card__icon">
+            <div
+                className="skill-card__icon"
+                aria-hidden="true"
+            >
                 <i className={icon}></i>
             </div>
 
@@ -22,7 +25,10 @@ function SkillCard({
                     {description}
                 </p>
 
-                <div className="skill-card__technologies">
+                <div
+                    className="skill-card__technologies"
+                    aria-label={`Tecnologías de ${title}`}
+                >
 
                     {technologies.map((technology) => (
 
@@ -32,7 +38,10 @@ function SkillCard({
                         >
 
                             {technology.icon && (
-                                <i className={technology.icon}></i>
+                                <i
+                                    className={technology.icon}
+                                    aria-hidden="true"
+                                ></i>
                             )}
 
                             {technology.name}

@@ -1,6 +1,10 @@
 function Career() {
+
     return (
-        <section id="career" className="career">
+        <section
+            id="career"
+            className="career"
+        >
 
             <div className="career__container">
 
@@ -11,24 +15,29 @@ function Career() {
                     </span>
 
                     <h2>
-                        Busco mi próxima oportunidad para crecer como Developer.
+                        Busco mi primera experiencia profesional en desarrollo.
                     </h2>
 
                     <p>
-                        Actualmente estoy enfocado en desarrollarme como Frontend
-                        Developer, profundizando mis conocimientos en ReactJS y
-                        ampliando mi formación hacia Backend.
+                        Mi objetivo es incorporarme como Frontend Developer
+                        o Software Developer en un equipo donde pueda aplicar
+                        mis conocimientos en React y JavaScript sobre productos
+                        y proyectos reales.
                     </p>
 
                     <p>
-                        Me interesa incorporarme a equipos donde pueda participar
-                        en proyectos reales, aprender de otros desarrolladores y
-                        aportar soluciones utilizando buenas prácticas de desarrollo.
+                        Me interesa especialmente trabajar en entornos colaborativos,
+                        aprender de desarrolladores con experiencia y continuar
+                        ampliando progresivamente mi perfil técnico hacia Backend
+                        y desarrollo de aplicaciones de extremo a extremo.
                     </p>
 
-                    <div className="career__technologies">
+                    <div
+                        className="career__technologies"
+                        aria-label="Tecnologías principales de mi perfil"
+                    >
 
-                        <span>ReactJS</span>
+                        <span>React</span>
                         <span>JavaScript</span>
                         <span>HTML5</span>
                         <span>CSS3</span>

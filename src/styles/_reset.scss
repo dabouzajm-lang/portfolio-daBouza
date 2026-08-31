@@ -1,29 +1,65 @@
-* {
+@use "./variables" as *;
+
+
+// ========================================
+// RESET
+// ========================================
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
 
     box-sizing: border-box;
 }
 
+
+// ========================================
+// DOCUMENT
+// ========================================
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
+    min-width: 320px;
+
     margin: 0;
+
+    overflow-x: hidden;
 
     background-color: $bg-primary;
 
     color: $text-primary;
 
-    font-family: "Inter", sans-serif;
+    font-family: $font-main;
+
+    -webkit-font-smoothing: antialiased;
+
+    -moz-osx-font-smoothing: grayscale;
 }
+
+#root {
+    min-height: 100vh;
+}
+
+
+// ========================================
+// LINKS
+// ========================================
 
 a {
     color: inherit;
 
     text-decoration: none;
 }
+
+
+// ========================================
+// LISTS
+// ========================================
 
 ul,
 ol {
@@ -33,6 +69,11 @@ ol {
     list-style: none;
 }
 
+
+// ========================================
+// FORM ELEMENTS
+// ========================================
+
 button,
 input,
 textarea,
@@ -40,9 +81,26 @@ select {
     font: inherit;
 }
 
+
+// ========================================
+// IMAGES
+// ========================================
+
 img {
     display: block;
 
     max-width: 100%;
 }
 
+
+// ========================================
+// REDUCED MOTION
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+}

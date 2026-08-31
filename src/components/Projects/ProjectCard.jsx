@@ -14,6 +14,7 @@ function ProjectCard({ project }) {
                 <img
                     src={project.image}
                     alt={`Captura del proyecto ${project.title}`}
+                    loading={project.featured ? "eager" : "lazy"}
                 />
 
                 {project.featured && (
@@ -29,6 +30,7 @@ function ProjectCard({ project }) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="project-card__overlay-link"
+                                aria-label={`Ver demo de ${project.title}`}
                             >
                                 Ver demo
 
@@ -42,6 +44,7 @@ function ProjectCard({ project }) {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="project-card__overlay-link"
+                                aria-label={`Ver código de ${project.title} en GitHub`}
                             >
                                 Código
 
@@ -56,25 +59,24 @@ function ProjectCard({ project }) {
 
             </div>
 
-
             <div className="project-card__content">
 
                 <span className="project-card__category">
                     {project.category}
                 </span>
 
-
                 <h3 className="project-card__title">
                     {project.title}
                 </h3>
-
 
                 <p className="project-card__description">
                     {project.description}
                 </p>
 
-
-                <div className="project-card__technologies">
+                <div
+                    className="project-card__technologies"
+                    aria-label={`Tecnologías utilizadas en ${project.title}`}
+                >
 
                     {project.technologies?.map((technology) => (
 
@@ -84,7 +86,10 @@ function ProjectCard({ project }) {
                         >
 
                             {technology.icon && (
-                                <i className={technology.icon}></i>
+                                <i
+                                    className={technology.icon}
+                                    aria-hidden="true"
+                                ></i>
                             )}
 
                             {technology.name}
@@ -94,7 +99,6 @@ function ProjectCard({ project }) {
                     ))}
 
                 </div>
-
 
                 {project.featured && project.features?.length > 0 && (
 
@@ -120,7 +124,6 @@ function ProjectCard({ project }) {
 
                 )}
 
-
                 <div className="project-card__actions">
 
                     <a
@@ -128,6 +131,7 @@ function ProjectCard({ project }) {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-card__button project-card__button--primary"
+                        aria-label={`Ver demo de ${project.title}`}
                     >
                         Ver demo
 
@@ -136,12 +140,12 @@ function ProjectCard({ project }) {
                         </span>
                     </a>
 
-
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="project-card__button project-card__button--secondary"
+                        aria-label={`Ver código de ${project.title} en GitHub`}
                     >
                         Código
 

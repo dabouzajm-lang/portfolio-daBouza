@@ -21,11 +21,11 @@ function Contact() {
                     <p>
                         Estoy buscando nuevas oportunidades como Frontend Developer,
                         donde pueda aportar mis conocimientos en React y JavaScript,
-                        continuar creciendo profesionalmente y formar parte de un equipo de desarrollo.
+                        continuar creciendo profesionalmente y formar parte de un
+                        equipo de desarrollo.
                     </p>
 
                 </div>
-
 
                 <div className="contact__links">
 
@@ -34,6 +34,7 @@ function Contact() {
                     <a
                         href="mailto:dabouza.j.m@gmail.com"
                         className="contact__link"
+                        aria-label="Enviar un email a Juan Manuel da Bouza"
                     >
 
                         <span
@@ -48,7 +49,6 @@ function Contact() {
                         </span>
 
                     </a>
-
 
                     {/* LINKEDIN */}
 
@@ -70,7 +70,6 @@ function Contact() {
                         </span>
 
                     </a>
-
 
                     {/* GITHUB */}
 

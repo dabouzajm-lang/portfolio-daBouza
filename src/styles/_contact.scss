@@ -1,3 +1,8 @@
+@use "./variables" as *;
+// ========================================
+// CONTACT
+// ========================================
+
 .contact {
     width: 90%;
     max-width: 1200px;
@@ -7,9 +12,19 @@
     padding: $section-padding 0;
 }
 
+
+// ========================================
+// CONTAINER
+// ========================================
+
 .contact__container {
     text-align: center;
 }
+
+
+// ========================================
+// HEADER
+// ========================================
 
 .contact__header {
     max-width: 700px;
@@ -36,6 +51,11 @@
 
     line-height: 1.8;
 }
+
+
+// ========================================
+// LINKS
+// ========================================
 
 .contact__links {
     display: flex;
@@ -81,6 +101,22 @@
     transform: translateY(-3px);
 }
 
+
+// ========================================
+// FOCUS
+// ========================================
+
+.contact__link:focus-visible {
+    outline: 2px solid $accent;
+
+    outline-offset: 4px;
+}
+
+
+// ========================================
+// EMAIL ICON
+// ========================================
+
 .contact__icon {
     display: flex;
 
@@ -102,11 +138,21 @@
     font-weight: 700;
 }
 
+
+// ========================================
+// DEVICON ICONS
+// ========================================
+
 .contact__link i {
     color: $accent;
 
     font-size: 1.1rem;
 }
+
+
+// ========================================
+// MOBILE
+// ========================================
 
 @media (max-width: 600px) {
 
@@ -120,6 +166,23 @@
 
     .contact__link {
         justify-content: center;
+    }
+
+}
+
+
+// ========================================
+// REDUCED MOTION
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact__link {
+        transition: none;
+    }
+
+    .contact__link:hover {
+        transform: none;
     }
 
 }

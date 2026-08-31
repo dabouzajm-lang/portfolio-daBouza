@@ -15,7 +15,7 @@ function About() {
                 </span>
 
                 <h2>
-                    Frontend Developer enfocado en crear experiencias web modernas.
+                    Construyendo una base sólida para desarrollarme profesionalmente en tecnología.
                 </h2>
 
             </div>
@@ -25,28 +25,31 @@ function About() {
                 <div className="about__description">
 
                     <p>
-                        Soy Frontend Developer con formación en desarrollo web,
-                        especializado en la creación de interfaces modernas,
-                        responsive y orientadas a una buena experiencia de usuario.
+                        Me formé en desarrollo frontend trabajando con tecnologías
+                        como React, JavaScript, HTML5, CSS3 y SASS, con especial
+                        interés en construir interfaces claras, funcionales y
+                        adaptables a distintos dispositivos.
                     </p>
 
                     <p>
-                        Actualmente trabajo principalmente con React y JavaScript,
-                        complementando mi formación con HTML5, CSS3, SASS, Bootstrap,
-                        Git y GitHub.
+                        A lo largo de mi formación desarrollé proyectos completos
+                        que me permitieron aplicar componentización, manejo de estado,
+                        navegación SPA, integración con Firebase, diseño responsive
+                        y buenas prácticas de organización del código.
                     </p>
 
                     <p>
-                        Luego de finalizar mi formación en JavaScript y obtener la
-                        certificación en ReactJS, actualmente estoy cursando Backend I
-                        en CoderHouse para ampliar progresivamente mis conocimientos
-                        y comprender mejor el desarrollo de aplicaciones de extremo a extremo.
+                        Luego de completar mi formación en JavaScript y React,
+                        actualmente continúo ampliando mi perfil con Backend I
+                        en CoderHouse, incorporando conceptos relacionados con
+                        Node.js, APIs REST y desarrollo del lado del servidor.
                     </p>
 
                     <p>
-                        Mi objetivo es incorporarme a un equipo de desarrollo donde
-                        pueda aportar mis conocimientos, seguir aprendiendo y participar
-                        en la construcción de productos digitales reales.
+                        Mi objetivo es conseguir mi primera experiencia profesional
+                        como Frontend o Software Developer, formar parte de un equipo
+                        de desarrollo y seguir creciendo a través de proyectos reales
+                        y trabajo colaborativo.
                     </p>
 
                 </div>
@@ -57,24 +60,26 @@ function About() {
                         icon="01"
                         title="Frontend"
                     >
-                        Desarrollo interfaces responsive y componentes reutilizables
-                        utilizando React, JavaScript, HTML5 y CSS3.
+                        Desarrollo interfaces y aplicaciones web utilizando React,
+                        JavaScript, HTML5 y CSS3, priorizando componentización,
+                        claridad y reutilización.
                     </AboutCard>
 
                     <AboutCard
                         icon="02"
                         title="UI & Responsive"
                     >
-                        Trabajo con SASS, Bootstrap, Flexbox, CSS Grid y principios
-                        de diseño responsive para diferentes dispositivos.
+                        Trabajo con SASS, Bootstrap, Flexbox y CSS Grid para crear
+                        interfaces consistentes y adaptables a distintos tamaños
+                        de pantalla.
                     </AboutCard>
 
                     <AboutCard
                         icon="03"
-                        title="En formación"
+                        title="Backend en formación"
                     >
-                        Actualmente amplío mis conocimientos hacia Backend mediante
-                        mi formación en CoderHouse.
+                        Actualmente amplío mis conocimientos con Node.js y APIs REST
+                        para comprender mejor el desarrollo integral de aplicaciones web.
                     </AboutCard>
 
                 </div>

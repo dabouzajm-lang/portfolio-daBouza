@@ -10,7 +10,7 @@ function Skills() {
             title: "Frontend Development",
 
             description:
-                "Desarrollo de interfaces modernas y aplicaciones web utilizando tecnologías actuales del ecosistema frontend.",
+                "Desarrollo de aplicaciones web con React y JavaScript, utilizando componentes reutilizables, manejo de estado y navegación SPA.",
 
             technologies: [
                 {
@@ -28,6 +28,10 @@ function Skills() {
                 {
                     name: "CSS3",
                     icon: "devicon-css3-plain colored"
+                },
+                {
+                    name: "Firebase",
+                    icon: "devicon-firebase-plain colored"
                 }
             ]
         },
@@ -38,7 +42,7 @@ function Skills() {
             title: "UI & Styling",
 
             description:
-                "Construcción de interfaces responsive utilizando sistemas de estilos, layouts modernos y metodologías de diseño adaptativo.",
+                "Construcción de interfaces responsive utilizando preprocesadores, frameworks CSS y sistemas de layout modernos.",
 
             technologies: [
                 {
@@ -67,7 +71,7 @@ function Skills() {
             title: "Tools & Workflow",
 
             description:
-                "Uso de herramientas de desarrollo y control de versiones para organizar, mantener y publicar proyectos.",
+                "Herramientas que utilizo para desarrollar, versionar, organizar y publicar proyectos web.",
 
             technologies: [
                 {
@@ -95,7 +99,7 @@ function Skills() {
             title: "Currently Learning",
 
             description:
-                "Actualmente ampliando mi perfil hacia el desarrollo backend para comprender el ciclo completo de una aplicación web.",
+                "Actualmente amplío mi formación hacia Backend para comprender mejor la arquitectura y el ciclo completo de una aplicación web.",
 
             technologies: [
                 {
@@ -103,7 +107,8 @@ function Skills() {
                     icon: "devicon-nodejs-plain colored"
                 },
                 {
-                    name: "Backend I"
+                    name: "Express",
+                    icon: "devicon-express-original"
                 },
                 {
                     name: "APIs REST"
@@ -130,12 +135,12 @@ function Skills() {
                 </h2>
 
                 <p>
-                    Un stack enfocado principalmente en Frontend,
-                    acompañado por formación continua en Backend.
+                    Mi stack está enfocado principalmente en desarrollo Frontend
+                    con React y JavaScript, complementado por herramientas de
+                    styling, control de versiones y formación continua en Backend.
                 </p>
 
             </div>
-
 
             <div className="skills__grid">
 

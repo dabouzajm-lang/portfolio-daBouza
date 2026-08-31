@@ -7,10 +7,10 @@ const projects = [
         category: "React E-commerce",
 
         description:
-            "E-commerce desarrollado con React, enfocado en una experiencia de compra clara, responsive y funcional para productos relacionados con el vóley.",
+            "E-commerce desarrollado con React que implementa catálogo dinámico, carrito global, checkout e integración con Firebase Firestore.",
 
         longDescription:
-            "Aplicación web desarrollada con React y Vite, estructurada mediante componentes reutilizables y navegación con React Router. Implementa gestión global del carrito utilizando Context API e integración con Firebase Firestore para la consulta de productos y generación de órdenes de compra.",
+            "Aplicación web desarrollada con React y Vite, organizada mediante componentes reutilizables y navegación SPA con React Router. Implementa gestión global del carrito mediante Context API e integración con Firebase Firestore para consultar productos, gestionar stock y generar órdenes de compra.",
 
         image: `${import.meta.env.BASE_URL}assets/img/volley-store.jpg`,
 
@@ -42,13 +42,10 @@ const projects = [
         ],
 
         features: [
-            "Carrito de compras global con Context API",
-            "Checkout y generación de órdenes",
-            "Persistencia de productos y órdenes con Firestore",
-            "Catálogo dinámico de productos",
-            "Filtrado por categorías",
-            "Vista de detalle de producto",
-            "Control de stock y cantidades",
+            "Carrito global gestionado con Context API",
+            "Checkout y generación de órdenes con Firestore",
+            "Catálogo dinámico con filtrado y control de stock",
+            "Vista de detalle de productos",
             "Navegación SPA con React Router",
             "Diseño responsive"
         ],
@@ -68,10 +65,10 @@ const projects = [
         category: "Frontend Website",
 
         description:
-            "Sitio web informativo sobre el vóley argentino, desarrollado como proyecto frontend responsive.",
+            "Sitio web informativo desarrollado desde cero aplicando HTML semántico, SASS, Bootstrap, diseño responsive y fundamentos de SEO.",
 
         longDescription:
-            "Proyecto web desarrollado desde cero aplicando HTML semántico, arquitectura de estilos con SASS, diseño responsive y buenas prácticas de SEO.",
+            "Proyecto web desarrollado desde cero aplicando HTML semántico, arquitectura de estilos con SASS, Bootstrap, diseño responsive y buenas prácticas de SEO.",
 
         image: `${import.meta.env.BASE_URL}assets/img/voley-argentino.jpg`,
 
@@ -121,10 +118,10 @@ const projects = [
         category: "React Application",
 
         description:
-            "Portfolio profesional desarrollado con React para presentar mi perfil como Frontend Developer, proyectos y stack tecnológico.",
+            "Portfolio profesional desarrollado con React y Vite para presentar proyectos, stack tecnológico y perfil profesional.",
 
         longDescription:
-            "Aplicación web desarrollada con React y Vite utilizando una arquitectura basada en componentes reutilizables. Implementa SASS para la organización de estilos, diseño responsive, navegación interna y publicación mediante GitHub Pages.",
+            "Aplicación web desarrollada con React y Vite mediante una arquitectura basada en componentes reutilizables. Utiliza SASS para organizar estilos, diseño responsive, navegación interna, accesibilidad básica y publicación mediante GitHub Pages.",
 
         image: `${import.meta.env.BASE_URL}assets/img/portfolio.jpg`,
 

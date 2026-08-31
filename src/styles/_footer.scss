@@ -1,8 +1,18 @@
-.footer {
-    border-top: 1px solid $border-color;
+@use "./variables" as *;
+// ========================================
+// FOOTER
+// ========================================
 
+.footer {
     padding: 2rem 0;
+
+    border-top: 1px solid $border-color;
 }
+
+
+// ========================================
+// CONTAINER
+// ========================================
 
 .footer__container {
     width: 90%;
@@ -12,18 +22,27 @@
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+    justify-content: space-between;
 
     gap: 1rem;
 }
+
+
+// ========================================
+// TEXT
+// ========================================
 
 .footer p {
     color: $text-secondary;
 
     font-size: 0.85rem;
 }
+
+
+// ========================================
+// MOBILE
+// ========================================
 
 @media (max-width: 600px) {
 

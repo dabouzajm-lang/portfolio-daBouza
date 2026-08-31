@@ -24,12 +24,13 @@ function Projects() {
                 </span>
 
                 <h2>
-                    Algunos proyectos en los que trabajé.
+                    Proyectos donde transformo conceptos en aplicaciones reales.
                 </h2>
 
                 <p>
-                    Una selección de proyectos donde aplico mis conocimientos
-                    de desarrollo frontend, React y tecnologías web modernas.
+                    Una selección de proyectos donde aplico React, JavaScript,
+                    diseño responsive, manejo de estado, integración con servicios
+                    externos y buenas prácticas de desarrollo frontend.
                 </p>
 
             </div>

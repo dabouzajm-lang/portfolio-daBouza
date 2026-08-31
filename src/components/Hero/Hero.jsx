@@ -8,7 +8,10 @@ function Hero() {
 
                     <div className="hero__status">
 
-                        <span className="hero__status-dot"></span>
+                        <span
+                            className="hero__status-dot"
+                            aria-hidden="true"
+                        ></span>
 
                         Abierto a oportunidades Frontend
 
@@ -20,6 +23,7 @@ function Hero() {
 
                     <h1 className="hero__title">
                         Hola, soy
+
                         <span>
                             Juan Manuel da Bouza.
                         </span>
@@ -31,10 +35,10 @@ function Hero() {
                     </h2>
 
                     <p className="hero__description">
-                        Desarrollo interfaces web modernas y responsive
-                        utilizando ReactJS y JavaScript, aplicando buenas
-                        prácticas de desarrollo, componentes reutilizables
-                        y una experiencia de usuario cuidada.
+                        Desarrollo aplicaciones frontend con React y JavaScript,
+                        trabajando con componentes reutilizables, diseño responsive
+                        y buenas prácticas orientadas a crear experiencias web
+                        claras y funcionales.
                     </p>
 
                     <div className="hero__buttons">
@@ -44,16 +48,19 @@ function Hero() {
                             className="btn btn--primary"
                         >
                             Ver proyectos
-                            <span>→</span>
+
+                            <span aria-hidden="true">
+                                →
+                            </span>
                         </a>
 
                         <a
                             href={`${import.meta.env.BASE_URL}assets/cv/daBouzaJuanManuel.pdf`}
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             className="btn btn--secondary"
                         >
-                            Descargar CV
+                            Ver CV
                         </a>
 
                     </div>
@@ -63,19 +70,25 @@ function Hero() {
                         <a
                             href="https://github.com/dabouzajm-lang"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             aria-label="GitHub"
                         >
-                            <i className="devicon-github-original"></i>
+                            <i
+                                className="devicon-github-original"
+                                aria-hidden="true"
+                            ></i>
                         </a>
 
                         <a
                             href="https://www.linkedin.com/in/juan-manuel-da-bouza-58a952249/"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                             aria-label="LinkedIn"
                         >
-                            <i className="devicon-linkedin-plain"></i>
+                            <i
+                                className="devicon-linkedin-plain"
+                                aria-hidden="true"
+                            ></i>
                         </a>
 
                     </div>
@@ -88,7 +101,10 @@ function Hero() {
 
                         <div className="hero__code-header">
 
-                            <div className="hero__code-dots">
+                            <div
+                                className="hero__code-dots"
+                                aria-hidden="true"
+                            >
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -111,6 +127,7 @@ function Hero() {
 
                             <p className="code-indent">
                                 name:{" "}
+
                                 <span className="code-green">
                                     "Juan Manuel"
                                 </span>,
@@ -118,44 +135,47 @@ function Hero() {
 
                             <p className="code-indent">
                                 role:{" "}
+
                                 <span className="code-green">
                                     "Frontend Developer"
                                 </span>,
                             </p>
 
                             <p className="code-indent">
-                                    stack: [
-                                    </p>
+                                stack: [
+                            </p>
 
-                                    <p className="code-indent-2">
-                                    <span className="code-green">
+                            <p className="code-indent-2">
+                                <span className="code-green">
                                     "React"
-                                    </span>,
-                                    </p>
+                                </span>,
+                            </p>
 
-                                    <p className="code-indent-2">
-                                    <span className="code-green">
+                            <p className="code-indent-2">
+                                <span className="code-green">
                                     "JavaScript"
-                                    </span>,
-                                    </p>
+                                </span>,
+                            </p>
 
-                                    <p className="code-indent-2">
-                                    <span className="code-green">
+                            <p className="code-indent-2">
+                                <span className="code-green">
                                     "SASS"
-                                    </span>,
-                                    </p>
+                                </span>,
+                            </p>
 
-                                    <p className="code-indent-2">
-                                   <span className="code-green">
+                            <p className="code-indent-2">
+                                <span className="code-green">
                                     "Node.js"
-                                    </span>
-                                    </p>
+                                </span>
+                            </p>
 
-                                    <p className="code-indent">
-                                    ],
-                                    </p>
+                            <p className="code-indent">
+                                ],
+                            </p>
 
-                            <p>{"}"}</p>
+                            <p>
+                                {"}"}
+                            </p>
 
                         </div>
 
@@ -165,9 +185,17 @@ function Hero() {
 
             </div>
 
-            <div className="hero__scroll">
-                <span>Scroll para explorar</span>
-                <span>↓</span>
+            <div
+                className="hero__scroll"
+                aria-hidden="true"
+            >
+                <span>
+                    Scroll para explorar
+                </span>
+
+                <span>
+                    ↓
+                </span>
             </div>
 
         </section>

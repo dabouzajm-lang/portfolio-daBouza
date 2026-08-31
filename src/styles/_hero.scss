@@ -1,3 +1,8 @@
+@use "./variables" as *;
+// ========================================
+// HERO
+// ========================================
+
 .hero {
     position: relative;
 
@@ -15,6 +20,11 @@
     padding: 100px 0;
 }
 
+
+// ========================================
+// CONTAINER
+// ========================================
+
 .hero__container {
     width: 100%;
 
@@ -27,9 +37,19 @@
     gap: 5rem;
 }
 
+
+// ========================================
+// CONTENT
+// ========================================
+
 .hero__content {
     max-width: 760px;
 }
+
+
+// ========================================
+// STATUS
+// ========================================
 
 .hero__status {
     display: inline-flex;
@@ -62,8 +82,14 @@
 
     background-color: #22c55e;
 
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
+    box-shadow:
+        0 0 10px rgba(34, 197, 94, 0.7);
 }
+
+
+// ========================================
+// EYEBROW
+// ========================================
 
 .hero__eyebrow {
     display: block;
@@ -80,6 +106,11 @@
 
     text-transform: uppercase;
 }
+
+
+// ========================================
+// TITLE
+// ========================================
 
 .hero__title {
     margin-bottom: 1.25rem;
@@ -99,6 +130,11 @@
     color: $accent;
 }
 
+
+// ========================================
+// SUBTITLE
+// ========================================
+
 .hero__subtitle {
     max-width: 700px;
 
@@ -113,6 +149,11 @@
     line-height: 1.3;
 }
 
+
+// ========================================
+// DESCRIPTION
+// ========================================
+
 .hero__description {
     max-width: 650px;
 
@@ -124,6 +165,11 @@
 
     line-height: 1.8;
 }
+
+
+// ========================================
+// BUTTONS
+// ========================================
 
 .hero__buttons {
     display: flex;
@@ -189,6 +235,22 @@
     color: $accent;
 }
 
+
+// ========================================
+// BUTTON FOCUS
+// ========================================
+
+.hero .btn:focus-visible {
+    outline: 2px solid $accent;
+
+    outline-offset: 4px;
+}
+
+
+// ========================================
+// SOCIALS
+// ========================================
+
 .hero__socials {
     display: flex;
 
@@ -228,15 +290,31 @@
     transform: translateY(-3px);
 }
 
+.hero__socials a:focus-visible {
+    outline: 2px solid $accent;
+
+    outline-offset: 4px;
+}
+
 .hero__socials i {
     font-size: 1.2rem;
 }
+
+
+// ========================================
+// VISUAL
+// ========================================
 
 .hero__visual {
     display: flex;
 
     justify-content: center;
 }
+
+
+// ========================================
+// CODE CARD
+// ========================================
 
 .hero__code {
     width: 100%;
@@ -262,10 +340,17 @@
 }
 
 .hero__code:hover {
-    transform: rotate(0deg) translateY(-5px);
+    transform:
+        rotate(0deg)
+        translateY(-5px);
 
     border-color: $accent;
 }
+
+
+// ========================================
+// CODE HEADER
+// ========================================
 
 .hero__code-header {
     display: flex;
@@ -299,10 +384,17 @@
     background-color: $border-color;
 }
 
+
+// ========================================
+// CODE BODY
+// ========================================
+
 .hero__code-body {
     padding: 1.75rem;
 
-    font-family: "Courier New", monospace;
+    font-family:
+        "Courier New",
+        monospace;
 
     font-size: 0.85rem;
 
@@ -329,6 +421,11 @@
     color: #86efac;
 }
 
+
+// ========================================
+// SCROLL INDICATOR
+// ========================================
+
 .hero__scroll {
     position: absolute;
 
@@ -352,21 +449,34 @@
 
     opacity: 0.6;
 
-    animation: scrollIndicator 2s ease-in-out infinite;
+    animation:
+        scrollIndicator
+        2s
+        ease-in-out
+        infinite;
 }
 
 @keyframes scrollIndicator {
 
     0%,
     100% {
-        transform: translateX(-50%) translateY(0);
+        transform:
+            translateX(-50%)
+            translateY(0);
     }
 
     50% {
-        transform: translateX(-50%) translateY(6px);
+        transform:
+            translateX(-50%)
+            translateY(6px);
     }
 
 }
+
+
+// ========================================
+// TABLET
+// ========================================
 
 @media (max-width: 900px) {
 
@@ -398,6 +508,11 @@
 
 }
 
+
+// ========================================
+// MOBILE
+// ========================================
+
 @media (max-width: 600px) {
 
     .hero {
@@ -405,7 +520,12 @@
     }
 
     .hero__title {
-        font-size: clamp(2.8rem, 14vw, 4rem);
+        font-size:
+            clamp(
+                2.8rem,
+                14vw,
+                4rem
+            );
     }
 
     .hero__subtitle {
@@ -424,6 +544,25 @@
         padding: 1.25rem;
 
         font-size: 0.75rem;
+    }
+
+}
+
+
+// ========================================
+// REDUCED MOTION
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero__scroll {
+        animation: none;
+    }
+
+    .hero__code,
+    .btn,
+    .hero__socials a {
+        transition: none;
     }
 
 }

@@ -1,4 +1,5 @@
 function Footer() {
+
     return (
         <footer className="footer">
 
@@ -9,7 +10,7 @@ function Footer() {
                 </p>
 
                 <p>
-                    Frontend Developer · ReactJS
+                    Frontend Developer · React
                 </p>
 
             </div>
